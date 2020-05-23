@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homework.LoginScreenController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="350.0" style="-fx-background-color: #4C83A2;">
+               <children>
+                  <Label layoutX="73.0" layoutY="300.0" text="Management Tool" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="126.0" layoutY="207.0" text="ACAR.ev" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="123.0" layoutY="127.0" text="Welcome To" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="565.0" prefHeight="35.0" prefWidth="350.0" text="Only for private use" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="350.0" prefHeight="600.0" prefWidth="450.0" style="-fx-background-color: #D8D8D8;">
+               <children>
+                  <JFXTextField fx:id="username" labelFloat="true" layoutX="71.0" layoutY="188.0" prefHeight="31.0" prefWidth="308.0" promptText="Username">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="password" labelFloat="true" layoutX="71.0" layoutY="285.0" onKeyPressed="#loginOnKeyPressed" prefHeight="31.0" prefWidth="308.0" promptText="Password">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="399.0" onMouseClicked="#loginOnMouseClicked" prefHeight="31.0" prefWidth="90.0" ripplerFill="WHITE" style="-fx-background-color: #18A0FB; -fx-background-radius: 5px;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="251.0" layoutY="399.0" onMouseClicked="#exitApplication" prefHeight="31.0" prefWidth="90.0" ripplerFill="WHITE" style="-fx-background-color: #18A0FB; -fx-background-radius: 5px;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" layoutX="42.0" layoutY="217.0" size="25" />
+                  <MaterialDesignIconView fill="WHITE" glyphName="KEY_VARIANT" layoutX="42.0" layoutY="314.0" size="25" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

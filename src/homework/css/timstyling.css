@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 11, 2020, 8:19:52 PM
+    Author     : Penandjo
+*/
+.button {
+  -fx-transition-duration: 0.4s;
+  -fx-background-radius: 5px;
+  -fx-background-color:	#595A5A;
+}
+
+.button:hover {
+  -fx-background-color: #4CAF50; /* Green */
+}
+
+.vbox {
+  -fx-background-image:  url(src/img/sidebar-5.jpg);
+  -fx-background-repeat:no-repeat;
+  -fx-background-size: contain;
+}
+
+#bugsBtn, #websiteBtn, #serverBtn {
+  -fx-transition-duration: 0.4s;
+  -fx-background-color:	#942CAE;
+}
+
+
+#bugsBtn:hover,#websiteBtn:hover,#serverBtn:hover {
+  -fx-background-radius: 5px;
+  -jfx-button-type: RAISED;
+  -fx-background-color: rgba(255, 255, 255, 0.3); /*white transparent background without affect text opacity*/
+}
+
+#serverBtn:focused {
+  -fx-background-radius: 5px;
+  -jfx-background-color: #FFFFFF; /*white transparent background without affect text opacity*/
+  /*-jfx-background-color: rgba(255, 255, 255, 0.3);*/
+}
+
+#settingsPopup {
+  -fx-background-radius: 5px;
+  -fx-background-color: rgba(71, 163, 75, 0.3); /*white transparent background without affect text opacity*/
+}
+
+#sidebarFilters {
+  -fx-background-radius: 5px;
+  -fx-background-color: #FFFFFF; /*white transparent background without affect text opacity*/
+}
+
+#downloadBtn:hover,#getproBtn:hover,#docuBtn:hover {
+  -jfx-button-type: RAISED;
+}
+
+

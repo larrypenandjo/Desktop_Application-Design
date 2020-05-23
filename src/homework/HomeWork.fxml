@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="860.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homework.HomeWorkController">
+   <children>
+      <AnchorPane prefHeight="860.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fx:id="scrollPaneMenu" hbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <VBox fx:id="vboxMenu" prefHeight="800.0" prefWidth="265.0" style="-fx-background-image: url(img/sidebar-5.jpg); -fx-background-size: 100% 100%; -fx-background-repeat:no-repeat;" stylesheets="@css/timstyling.css">
+                     <children>
+                        <Pane maxHeight="80.0" maxWidth="265.0" minHeight="80.0" minWidth="265.0" opacity="0.83" prefHeight="80.0" prefWidth="265.0" style="-fx-background-color: #272829;" VBox.vgrow="ALWAYS">
+                           <children>
+                              <ImageView fitHeight="56.0" fitWidth="86.0" layoutX="12.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/reactlogo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="105.0" layoutY="28.0" text="CREATIVE TIM" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="80.0" prefHeight="1.0" prefWidth="265.0" style="-fx-background-color: #FFFFFF;" />
+                           </children>
+                        </Pane>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Dashboard" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="VIEW_DASHBOARD" size="18" text="" />
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="User Profile" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Table List" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="CONTENT_PASTE" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Typography" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="FILE_DOCUMENT_BOX" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Icons" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="PACKAGE" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Maps" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="MAP_MARKER" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Notifications" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="BELL" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="RTL Support" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="WRENCH" size="18" />
+                           </graphic>
+                        </JFXButton>
+                        <Region prefHeight="64.0" prefWidth="265.0" VBox.vgrow="ALWAYS" />
+                        <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="10.0" prefHeight="76.0" prefWidth="200.0" stylesheets="@css/timstyling.css" text="Upgrade To PRO" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" top="30.0" />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="PACKAGE_UP" size="18" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="testPane" layoutX="265.0" prefHeight="860.0" prefWidth="935.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fx:id="scrollPane" layoutY="70.0" prefHeight="800.0" prefWidth="935.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="71.0">
+               <content>
+                  <AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="935.0" style="-fx-background-color: #CDCDCD;">
+                     <children>
+                        <HBox fx:id="hboxDashboard" layoutX="20.0" layoutY="47.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                           <children>
+                              <Pane minWidth="200.0" prefHeight="131.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Separator layoutY="84.0" prefWidth="200.0" />
+                                    <Label layoutX="113.0" layoutY="13.0" text="Used Space" textFill="#868686" />
+                                    <Label layoutX="128.0" layoutY="47.0" text="49/50 GB" />
+                                    <Label layoutX="32.0" layoutY="95.0" text="Get more space" textFill="#903535" />
+                                    <MaterialDesignIconView fill="#cd1414" glyphName="ALERT" layoutX="7.0" layoutY="111.0" size="18" />
+                                    <Pane layoutX="14.0" layoutY="-21.0" prefHeight="73.0" prefWidth="68.0" style="-fx-background-color: #FD9A14; -fx-background-radius: 5px;">
+                                       <children>
+                                          <MaterialDesignIconView fill="WHITE" glyphName="CHECKBOX_MULTIPLE_BLANK_OUTLINE" layoutX="17.0" layoutY="49.0" size="35" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Pane minWidth="200.0" prefHeight="131.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Separator layoutY="84.0" prefWidth="200.0" />
+                                    <Label layoutX="130.0" layoutY="13.0" text="Revenue" textFill="#868686" />
+                                    <Label layoutX="140.0" layoutY="47.0" text="34,245" />
+                                    <Label layoutX="32.0" layoutY="95.0" text="Last 24 Hours" textFill="#808080" />
+                                    <MaterialDesignIconView fill="GREY" glyphName="CALENDAR" layoutX="7.0" layoutY="111.0" size="18" />
+                                    <Pane layoutX="14.0" layoutY="-21.0" prefHeight="73.0" prefWidth="68.0" style="-fx-background-color: #4AA54E; -fx-background-radius: 5px;">
+                                       <children>
+                                          <MaterialDesignIconView fill="WHITE" glyphName="BANK" layoutX="17.0" layoutY="49.0" size="35" />
+                                       </children>
+                                    </Pane>
+                                    <MaterialIconView glyphName="ATTACH_MONEY" layoutX="124.0" layoutY="66.0" size="18" stroke="#949494" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Pane minWidth="200.0" prefHeight="131.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Separator layoutY="84.0" prefWidth="200.0" />
+                                    <Label layoutX="113.0" layoutY="13.0" text="Fixed Issues" textFill="#868686" />
+                                    <Label layoutX="172.0" layoutY="47.0" text="75" />
+                                    <Label layoutX="32.0" layoutY="95.0" text="Tracked from GitHub" textFill="GREY" />
+                                    <MaterialDesignIconView fill="GREY" glyphName="GIT" layoutX="7.0" layoutY="111.0" size="18" />
+                                    <Pane layoutX="14.0" layoutY="-21.0" prefHeight="73.0" prefWidth="68.0" style="-fx-background-color: #E73F3B; -fx-background-radius: 5px;">
+                                       <children>
+                                          <MaterialDesignIconView fill="WHITE" glyphName="ALERT_CIRCLE" layoutX="17.0" layoutY="49.0" size="35" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Pane minWidth="200.0" prefHeight="131.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Separator layoutY="84.0" prefWidth="200.0" />
+                                    <Label layoutX="128.0" layoutY="13.0" text="Followers" textFill="#868686" />
+                                    <Label layoutX="154.0" layoutY="47.0" text="+245" />
+                                    <Label layoutX="32.0" layoutY="95.0" text="Just Updated" textFill="GREY" />
+                                    <MaterialDesignIconView fill="GREY" glyphName="CLOCK" layoutX="7.0" layoutY="111.0" size="18" />
+                                    <Pane layoutX="14.0" layoutY="-21.0" prefHeight="73.0" prefWidth="68.0" style="-fx-background-color: #10B7CC; -fx-background-radius: 5px;">
+                                       <children>
+                                          <MaterialDesignIconView fill="WHITE" glyphName="HUMAN" layoutX="17.0" layoutY="49.0" size="35" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="40.0" top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="chartsHbox" layoutX="20.0" layoutY="215.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Pane minWidth="278.0" prefHeight="247.0" prefWidth="278.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Pane layoutX="10.0" layoutY="-30.0" prefHeight="174.0" prefWidth="256.0" style="-fx-background-color: #47A34B; -fx-background-radius: 5px;">
+                                       <children>
+                                          <LineChart fx:id="salesChart" layoutY="-3.0" prefHeight="178.0" prefWidth="256.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis minorTickCount="0" side="LEFT" tickLabelFill="WHITE" tickLabelGap="5.0" tickLength="3.0" upperBound="40.0" />
+                                             </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="21.0" layoutY="151.0" text="Daily Sales">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="179.0" text="increase in today sales" />
+                                    <Separator layoutY="205.0" prefHeight="3.0" prefWidth="278.0" />
+                                    <Label layoutX="33.0" layoutY="215.0" text="Updated 4 minutes ago" textFill="GREY" />
+                                    <MaterialDesignIconView fill="GREY" glyphName="CLOCK" layoutX="8.0" layoutY="231.0" size="18" />
+                                    <MaterialDesignIconView fill="#47a34b" glyphName="ARROW_UP" layoutX="20.0" layoutY="195.0" size="15" />
+                                    <Label layoutX="38.0" layoutY="179.0" text="55%" textFill="#47a34b" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Pane minWidth="278.0" prefHeight="247.0" prefWidth="278.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Pane layoutX="10.0" layoutY="-30.0" prefHeight="174.0" prefWidth="256.0" style="-fx-background-color: #FC950D; -fx-background-radius: 5px;">
+                                       <children>
+                                          <BarChart fx:id="emailSubsChart" layoutX="8.0" layoutY="9.0" prefHeight="160.0" prefWidth="242.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis minorTickLength="3.0" side="LEFT" tickLabelFill="WHITE" tickLabelGap="5.0" tickLength="3.0" upperBound="800.0" />
+                                             </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="21.0" layoutY="151.0" text="Email Subscription">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutY="205.0" prefHeight="3.0" prefWidth="278.0" />
+                                    <Label layoutX="33.0" layoutY="215.0" text="Campaign sent 2 days ago" textFill="GREY" />
+                                    <MaterialDesignIconView fill="GREY" glyphName="CLOCK" layoutX="8.0" layoutY="231.0" size="18" />
+                                    <Label layoutX="23.0" layoutY="178.0" text="Last Campaign Performance" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Pane minWidth="278.0" prefHeight="247.0" prefWidth="278.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Pane layoutX="10.0" layoutY="-30.0" prefHeight="174.0" prefWidth="256.0" style="-fx-background-color: #E73E3A; -fx-background-radius: 5px;">
+                                       <children>
+                                          <LineChart fx:id="tasksChart" layoutY="-3.0" prefHeight="178.0" prefWidth="256.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis minorTickCount="0" side="LEFT" tickLabelFill="WHITE" tickLabelGap="5.0" tickLength="3.0" upperBound="800.0" />
+                                             </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="21.0" layoutY="151.0" text="Completed Tasks">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="179.0" text="Last Campaign Performance" />
+                                    <Separator layoutY="205.0" prefHeight="3.0" prefWidth="278.0" />
+                                    <Label layoutX="33.0" layoutY="215.0" text="Campaign sent 2 days ago" textFill="GREY" />
+                                    <MaterialDesignIconView fill="GREY" glyphName="CLOCK" layoutX="8.0" layoutY="231.0" size="18" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="40.0" top="20.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="notificationsHbox" layoutX="20.0" layoutY="518.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Pane minWidth="425.0" prefHeight="265.0" prefWidth="425.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Pane layoutX="14.0" layoutY="-55.0" prefHeight="81.0" prefWidth="398.0" style="-fx-background-color: #942CAE; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="30.0" text="Tasks:" textFill="WHITE">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="bugsBtn" alignment="BASELINE_LEFT" layoutX="75.0" layoutY="21.0" onAction="#displayBugs" prefHeight="40.0" stylesheets="@css/timstyling.css" text="BUGS" textFill="WHITE">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="TRAFFIC_LIGHT" size="18" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="websiteBtn" alignment="BASELINE_LEFT" layoutX="169.0" layoutY="23.0" onAction="#displayWebsite" prefHeight="40.0" stylesheets="@css/timstyling.css" text="WEBSITE" textFill="WHITE">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="WEB" size="18" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="serverBtn" alignment="BASELINE_LEFT" layoutX="284.0" layoutY="23.0" onAction="#displayServer" prefHeight="40.0" stylesheets="@css/timstyling.css" text="SERVER" textFill="WHITE">
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="CLOUD" size="18" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="serverPane" layoutX="1.0" layoutY="37.0" visible="false">
+                                       <children>
+                                          <Pane prefHeight="53.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="16.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="18.0" text="New employees on 15th September, 2016">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="33.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="33.0" />
+                                                <Separator layoutX="9.0" layoutY="53.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutY="53.0" prefHeight="84.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="14.0" text="Flooded: One year later, assessing what was lost and&#10;what was found when a ravaging rain swept through&#10;metro Detroit">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="49.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="49.0" />
+                                                <Separator layoutX="9.0" layoutY="84.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutY="137.0" prefHeight="67.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="25.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="16.0" text="Sign contract for &quot;What are conference organizers&#10;afraid of?&quot;">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="41.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="42.0" />
+                                                <Separator layoutX="9.0" layoutY="67.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="websitePane" layoutY="47.0" prefWidth="425.0" visible="false">
+                                       <children>
+                                          <Pane prefHeight="84.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="14.0" text="Flooded: One year later, assessing what was lost and&#10;what was found when a ravaging rain swept through&#10;metro Detroit">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="49.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="49.0" />
+                                                <Separator layoutX="9.0" layoutY="84.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutY="84.0" prefHeight="67.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="25.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="16.0" text="Sign contract for &quot;What are conference organizers&#10;afraid of?&quot;">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="41.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="42.0" />
+                                                <Separator layoutX="9.0" layoutY="67.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="bugsPane" layoutY="31.0">
+                                       <children>
+                                          <Pane prefHeight="53.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="16.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="9.0" text="Create 4 Invisible User Experiences you Never Knew&#10;About&#10;">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="33.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="33.0" />
+                                                <Separator layoutX="9.0" layoutY="53.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutY="53.0" prefHeight="84.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="14.0" text="Flooded: One year later, assessing what was lost and&#10;what was found when a ravaging rain swept through&#10;metro Detroit">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="49.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="49.0" />
+                                                <Separator layoutX="9.0" layoutY="84.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutY="137.0" prefHeight="67.0" prefWidth="425.0">
+                                             <children>
+                                                <CheckBox layoutX="14.0" layoutY="25.0" mnemonicParsing="false" />
+                                                <Label layoutX="51.0" layoutY="16.0" text="Lines From Great Russian Literature? Or E-mails&#10;From My Boss?">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <MaterialDesignIconView fill="#942cae" glyphName="PENCIL" layoutX="366.0" layoutY="41.0" />
+                                                <MaterialDesignIconView fill="RED" glyphName="WINDOW_CLOSE" layoutX="390.0" layoutY="42.0" />
+                                                <Separator layoutX="9.0" layoutY="67.0" prefWidth="400.0" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" top="45.0" />
+                                 </HBox.margin>
+                              </Pane>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Pane minWidth="425.0" prefHeight="265.0" prefWidth="425.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5px;">
+                                 <children>
+                                    <Pane layoutX="14.0" layoutY="-55.0" prefHeight="81.0" prefWidth="398.0" style="-fx-background-color: #FC950D; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="14.0" text="Employees Stats" textFill="WHITE">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="25.0" layoutY="48.0" text="New employees on 15th September, 2016" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="46.0" layoutY="122.0" prefHeight="21.0" prefWidth="335.0" text="the list of new employees still has to be actualized" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" right="40.0" top="45.0" />
+                                 </HBox.margin>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <HBox fx:id="hboxBottom" alignment="CENTER_LEFT" layoutY="799.0" spacing="15.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label text="HOME">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="COMPANY" />
+                  <Label text="PORTFOLIO" />
+                  <Label text="BLOG" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label text="2020 Creative Tim, made with love for a better web" textFill="#808080">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="hboxTop" alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="Dashboard" textFill="#808080">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <JFXTextField labelFloat="true" prefHeight="31.0" prefWidth="285.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <MaterialIconView fill="#7c7c7c" glyphName="SEARCH" size="25">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </MaterialIconView>
+                  <MaterialDesignIconView fill="#7c7c7c" glyphName="VIEW_DASHBOARD" size="25">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView fill="#7c7c7c" glyphName="BELL" size="25">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView fill="#7c7c7c" glyphName="ACCOUNT" size="25">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="30.0" top="20.0" />
+                     </HBox.margin>
+                  </MaterialDesignIconView>
+               </children>
+            </HBox>
+            <Pane fx:id="settingsPopup" layoutX="860.0" layoutY="236.0" onMouseClicked="#settingsBtnOnMouseCliked" opacity="0.93" prefHeight="60.0" prefWidth="60.0" stylesheets="@css/timstyling.css" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" layoutX="8.0" layoutY="48.0" size="45" />
+               </children>
+            </Pane>
+            <Pane fx:id="sidebarFilters" layoutX="555.0" layoutY="157.0" prefHeight="437.0" prefWidth="285.0" stylesheets="@css/timstyling.css" AnchorPane.rightAnchor="95.0">
+               <children>
+                  <Label layoutX="76.0" layoutY="10.0" text="SIDEBAR FILTERS">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="sidebarLila" fill="#9c27b0" layoutX="31.0" layoutY="56.0" onMouseClicked="#sidebarLilaClicked" onMouseEntered="#sidebarLilaEntered" onMouseExited="#sidebarLilaExit" radius="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fx:id="sidebarBlue" fill="#00bcd4" layoutX="76.0" layoutY="56.0" onMouseClicked="#sidebarBlueClicked" onMouseEntered="#sidebarBlueEntered" radius="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fx:id="sidebarGreen" fill="#4caf50" layoutX="121.0" layoutY="56.0" onMouseClicked="#sidebarGreenClicked" onMouseEntered="#sidebarGreenEntered" radius="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fx:id="sidebarRed" fill="#f44336" layoutX="166.0" layoutY="56.0" onMouseClicked="#sidebarRedClicked" onMouseEntered="#sidebarRedEntered" radius="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fx:id="sidebarOrange" fill="#ff9800" layoutX="214.0" layoutY="56.0" onMouseClicked="#sidebarOrangeClicked" onMouseEntered="#sidebarOrangEntered" radius="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Label layoutX="96.0" layoutY="92.0" text="IMAGES">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="19.0" layoutY="125.0" prefHeight="103.0" prefWidth="73.0" style="-fx-background-radius: 5px;">
+                     <children>
+                        <ImageView fitHeight="103.0" fitWidth="73.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/sidebar-1.jpg" />
+                           </image></ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="106.0" layoutY="125.0" prefHeight="103.0" prefWidth="73.0" style="-fx-background-radius: 5px;">
+                     <children>
+                        <ImageView fitHeight="103.0" fitWidth="73.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/sidebar-2.jpg" />
+                           </image></ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="194.0" layoutY="125.0" prefHeight="103.0" prefWidth="73.0" style="-fx-background-radius: 5px;">
+                     <children>
+                        <ImageView fitHeight="103.0" fitWidth="73.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/sidebar-4.jpg" />
+                           </image></ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="downloadBtn" layoutX="10.0" layoutY="244.0" prefHeight="31.0" prefWidth="265.0" style="-fx-background-color: #4CAF50;" stylesheets="@css/timstyling.css" text="DOWNLOAD FREE" textFill="WHITE" />
+                  <JFXButton fx:id="getproBtn" layoutX="10.0" layoutY="282.0" prefHeight="31.0" prefWidth="265.0" style="-fx-background-color: #FF9800;" stylesheets="@css/timstyling.css" text="GET PRO VERSION" textFill="WHITE" />
+                  <JFXButton fx:id="docuBtn" layoutX="10.0" layoutY="320.0" prefHeight="31.0" prefWidth="265.0" style="-fx-background-color: #00ACED;" stylesheets="@css/timstyling.css" text="DOCUMENTATION" textFill="WHITE" />
+                  <Label layoutX="73.0" layoutY="372.0" text="Thank You For Sharing">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#3b5998" glyphName="FACEBOOK_SQUARE" layoutX="114.0" layoutY="420.0" size="30" />
+                  <FontAwesomeIconView fill="#00aced" glyphName="TWITTER_SQUARE" layoutX="145.0" layoutY="420.0" size="30" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
